@@ -6,7 +6,6 @@ const game = createSlice({
     username: '',
     description: '',
     loading: false
-    // steps: [] // Osäker på vad vi behöver här
   },
   reducers: {
     setUser: (store, action) => {
@@ -18,10 +17,6 @@ const game = createSlice({
     setLoading: (store, action) => {
       store.loading = action.payload;
     }
-    // setStep: (store, action) => {
-    // store.steps = [...store.moves, action.payload];
-    //   console.log('store.steps', store.steps)
-    // }
   }
 });
 
