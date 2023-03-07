@@ -8,13 +8,13 @@ import GameImage from './GameImage.js'
 const DescriptionWrapper = styled.div`
 color: white;
 // border: solid 2px hotpink;
-width: 80%;
+width: 92%;
 display: grid;
 justify-self: center;
 align-self: self-end;
 line-height:0.9em;
 
-@media (min-width: 667px) and (max-width: 1024px) {
+@media (min-width: 667px) {
       width: 80%;
       line-height:1.1em;
     }
@@ -36,15 +36,16 @@ color: white;
 font-size: 15px;
 line-height: 1.2;
 align-self: end;
-padding: 25px 0 10px 0;
+padding: 20px 0 0 0;
 font-family: "Average Sans";
 
-@media (min-width: 667px) and (max-width: 1024px) {
+@media (min-width: 667px) {
 padding: 25px 0 0 0;
+font-size: 16px;
 }
 
 @media (min-width: 1025px) {
-font-size: 17px;
+font-size: 16.5px;
 }
 `
 

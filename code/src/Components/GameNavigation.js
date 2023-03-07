@@ -34,7 +34,7 @@ const GameNavigation = ({ actions, coords }) => {
 
   return (
     <ChooseDirectionWrapper>
-      <p style={{ fontWeight: 'bold', fontSize: '22px', fontFamily: 'Cinzel' }}>Choose direction</p>
+      <p style={{ fontWeight: 'bold', fontSize: '23px', fontFamily: 'Cinzel' }}>Choose direction</p>
       <DirectionGrid>
         <div className="north">
           <DirectionButton direction="North" isAvailable={availableMoves.North} handleOnClick={handleOnClick} />
@@ -60,7 +60,7 @@ const ChooseDirectionWrapper = styled.div`
     text-align: center;
     height: 240px;
     align-self: end;
-    padding: 0 0 20px 0;
+    padding: 0 0 10px 0;
 
     @media (min-width: 667px) and (max-width: 1024px) {
     padding: 0 0 30px 0;
