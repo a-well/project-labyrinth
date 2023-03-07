@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components/macro';
+import React from 'react'
+import styled from 'styled-components/macro'
 
 function coordsToBackgroundImageWeb(coords) {
   // @TODO change to switch

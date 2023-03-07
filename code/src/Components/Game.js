@@ -1,34 +1,9 @@
-import React from 'react';
-import styled from 'styled-components/macro';
-import { useSelector } from 'react-redux';
-import GameNavigation from './GameNavigation';
-import Map from './Map';
+import React from 'react'
+import styled from 'styled-components/macro'
+import { useSelector } from 'react-redux'
+import GameNavigation from './GameNavigation'
+import Map from './Map'
 import GameImage from './GameImage.js'
-
-const Game = () => {
-  const description = useSelector((store) => store.game.description); // get description
-
-  return (
-    <GameImage coordinates={description.coordinates}>
-      <Map coordinates={description.coordinates} />
-      <DescriptionWrapper>
-        <DescriptionText>
-          <p>{description.description}</p>
-          {description.actions.map((action) => (
-            <p key={action.direction}>
-              Go {action.direction}: {action.description}
-            </p>
-          ))}
-          <p>What will you do next?</p>
-        </DescriptionText>
-        <GameNavigation
-          coords={description.coordinates}
-          actions={description.actions} />
-      </DescriptionWrapper>
-    </GameImage>
-  );
-}
-export default Game;
 
 const DescriptionWrapper = styled.div`
 color: white;
@@ -58,16 +33,43 @@ const DescriptionText = styled.div`
 display: grid;
 // border: solid 2px green;
 color: white;
-font-size: 14px;
-line-height: 1.3;
+font-size: 15px;
+line-height: 1.2;
 align-self: end;
 padding: 25px 0 10px 0;
+font-family: "Average Sans";
 
 @media (min-width: 667px) and (max-width: 1024px) {
 padding: 25px 0 0 0;
 }
 
 @media (min-width: 1025px) {
-font-size: 16px;
+font-size: 17px;
 }
 `
+
+const Game = () => {
+  const description = useSelector((store) => store.game.description)
+
+  return (
+    <GameImage coordinates={description.coordinates}>
+      <Map coordinates={description.coordinates} />
+      <DescriptionWrapper>
+        <DescriptionText>
+          <p>{description.description}</p>
+          <p style={{ fontStyle: 'italic' }}>What will you do next?</p>
+          {description.actions.map((action) => (
+            <p key={action.direction}>
+              Go {action.direction}: {action.description}
+            </p>
+          ))}
+        </DescriptionText>
+        <GameNavigation
+          coords={description.coordinates}
+          actions={description.actions} />
+      </DescriptionWrapper>
+    </GameImage>
+  );
+}
+export default Game
+

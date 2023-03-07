@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components/macro';
-import loaderAnimation from 'Lotties/Loader';
-import Lottie from 'lottie-react';
+import React from 'react'
+import styled from 'styled-components/macro'
+import loaderAnimation from 'Lotties/Loader'
+import Lottie from 'lottie-react'
 
 const LoaderContainer = styled.div`
 display: grid;
@@ -19,8 +19,8 @@ const Loader = () => (
       autoPlay
       rendererSettings={{
         preserveAspectRatio: 'xMidYMid slice'
-      }} />;
+      }} />
   </LoaderContainer>
 )
 
-export default Loader;
+export default Loader
