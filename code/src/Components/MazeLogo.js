@@ -1,10 +1,10 @@
-import React from 'react';
-import styled from 'styled-components/macro';
+import React from 'react'
+import styled from 'styled-components/macro'
 
 const StyledMazeLogo = styled.img`
- margin-top: 180px;
- width: 150px;
- margin-bottom: 60px;
+ margin-top: 120px;
+ width: 200px;
+ margin-bottom: 5px;
 `
 
 const MazeLogo = () => {
@@ -12,5 +12,5 @@ const MazeLogo = () => {
     <StyledMazeLogo src="./assets/images/maze_icon.svg" alt="The Maze" />
   )
 }
-export default MazeLogo;
 
+export default MazeLogo

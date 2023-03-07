@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components/macro';
-import { useDispatch } from 'react-redux';
-import { generateNextDescription } from 'reducers/game';
-import { NavButton, RestartButton } from './Buttons';
+import React from 'react'
+import styled from 'styled-components/macro'
+import { useDispatch } from 'react-redux'
+import { generateNextDescription } from 'reducers/game'
+import { NavButton, RestartButton } from './Buttons'
 
 const GameNavigation = ({ actions, coords }) => {
   const dispatch = useDispatch();
@@ -34,7 +34,7 @@ const GameNavigation = ({ actions, coords }) => {
 
   return (
     <ChooseDirectionWrapper>
-      <p style={{ fontWeight: 'bold', fontSize: 'Large' }}>Choose direction</p>
+      <p style={{ fontWeight: 'bold', fontSize: '22px', fontFamily: 'Cinzel' }}>Choose direction</p>
       <DirectionGrid>
         <div className="north">
           <DirectionButton direction="North" isAvailable={availableMoves.North} handleOnClick={handleOnClick} />
@@ -119,4 +119,4 @@ const DirectionButton = ({ direction, isAvailable, handleOnClick }) => {
   )
 }
 
-export default GameNavigation;
+export default GameNavigation
