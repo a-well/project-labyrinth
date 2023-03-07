@@ -1,15 +1,6 @@
-import React from 'react';
-import styled from 'styled-components/macro';
+import React from 'react'
+import styled from 'styled-components/macro'
 
-const Wrapper = ({ children }) => {
-  return (
-    <OuterWrapper>
-      <InnerWrapper>{children}</InnerWrapper>
-    </OuterWrapper>
-  );
-}
-
-export default Wrapper;
 const OuterWrapper = styled.div`
 display: grid;
 `
@@ -20,3 +11,13 @@ margin: 0 auto;
 justify-content: center;
 text-align: center;
 `
+
+const Wrapper = ({ children }) => {
+  return (
+    <OuterWrapper>
+      <InnerWrapper>{children}</InnerWrapper>
+    </OuterWrapper>
+  );
+}
+
+export default Wrapper
