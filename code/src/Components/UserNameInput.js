@@ -17,10 +17,18 @@ function makeid(length) {
   return result;
 }
 
+const UserNameInputContainer = styled.div`
+  justify-content: center;
+  display: grid;
+`
+
+const UserNameInputBackground = styled.div`
+  background-image: linear-gradient(#AA9CC2, #18141E);
+`
+
 const UserNameInput = () => {
   const [userNameInputValue, setUserNameInputValue] = useState('');
   const dispatch = useDispatch();
-  // const author = useSelector((store) => store.quotes.author);
 
   const onFormSubmit = (event) => {
     event.preventDefault();
@@ -56,12 +64,3 @@ const UserNameInput = () => {
 }
 
 export default UserNameInput
-
-const UserNameInputContainer = styled.div`
-justify-content: center;
-display: grid;
-`
-
-const UserNameInputBackground = styled.div`
-  background-image: linear-gradient(#AA9CC2, #18141E);
-`

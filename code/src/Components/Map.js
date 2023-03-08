@@ -22,23 +22,19 @@ function coordsToMap(coords) {
 }
 
 const StyledMap = styled.img`
-color: white;
-width: 15%;
-position: absolute;
-top: 40px;
-right: 40px;
+  color: white;
+  width: 15%;
+  position: absolute;
+  top: 40px;
+  right: 40px;
 
-@media (min-width: 667px) and (max-width: 1024px) {
+@media (min-width: 667px) {
    width: 100px;
   }
-
-@media (min-width: 1025px) {
-   width: 100px;
- }
 `
 
 const Map = ({ coordinates }) => {
-  const MazeMap = coordsToMap(coordinates);
+  const MazeMap = coordsToMap(coordinates)
 
   return (
     <StyledMap src={MazeMap} alt="Map of maze" title="Your current position" />

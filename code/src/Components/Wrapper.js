@@ -2,14 +2,14 @@ import React from 'react'
 import styled from 'styled-components/macro'
 
 const OuterWrapper = styled.div`
-display: grid;
+  display: grid;
 `
 const InnerWrapper = styled.div`
-min-height: 100vh;
-width: 300px;
-margin: 0 auto;
-justify-content: center;
-text-align: center;
+  min-height: 100vh;
+  width: 300px;
+  margin: 0 auto;
+  justify-content: center;
+  text-align: center;
 `
 
 const Wrapper = ({ children }) => {
@@ -17,7 +17,7 @@ const Wrapper = ({ children }) => {
     <OuterWrapper>
       <InnerWrapper>{children}</InnerWrapper>
     </OuterWrapper>
-  );
+  )
 }
 
 export default Wrapper

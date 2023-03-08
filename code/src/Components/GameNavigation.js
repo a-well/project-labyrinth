@@ -54,48 +54,46 @@ const GameNavigation = ({ actions, coords }) => {
 }
 
 const ChooseDirectionWrapper = styled.div`
-    // border: solid 2px red;
-    display: grid;
-    color: white;
-    text-align: center;
-    height: 240px;
-    align-self: end;
-    padding: 0 0 10px 0;
+  // border: solid 2px red;
+  display: grid;
+  color: white;
+  text-align: center;
+  height: 240px;
+  align-self: end;
 
-    @media (min-width: 667px) and (max-width: 1024px) {
+  @media (min-width: 667px) {
     padding: 0 0 30px 0;
+  }
 
-    }
-
-    @media (min-width: 1025px) {
-      height: 270px;
-    }
-  `
+  @media (min-width: 1025px) {
+    height: 270px;
+  }
+`
 
 const DirectionGrid = styled.div`
-    display: grid;
-    grid-template-areas: 
-      ". north ."
-      "west . east"
-      ". south .";
-    width: 150px;
-    height: 150px;
-    gap: 5px;
-    justify-self: center;
+  display: grid;
+  grid-template-areas: 
+    ". north ."
+    "west . east"
+    ". south .";
+  width: 150px;
+  height: 150px;
+  gap: 5px;
+  justify-self: center;
 
-    .north {
-      grid-area: north;
-    }
-    .east {
-      grid-area: east;
-    }
-    .south {
-      grid-area: south;
-    }
-    .west {
-      grid-area: west;
-    }
-  `
+  .north {
+    grid-area: north;
+  }
+  .east {
+    grid-area: east;
+  }
+  .south {
+    grid-area: south;
+  }
+  .west {
+    grid-area: west;
+  }
+`
 
 const DirectionButton = ({ direction, isAvailable, handleOnClick }) => {
   if (isAvailable) {

@@ -40,15 +40,15 @@ function coordsToBackgroundImageMob(coords) {
 }
 
 const StyledGameImage = styled.div`
-display: grid;
-background-image: url(${(props) => props.sImage});
-min-height: 100vh;
-background-size: contain;
-background-position: top;
-background-repeat: no-repeat;
-background-color: black;
+  display: grid;
+  background-image: url(${(props) => props.sImage});
+  min-height: 100vh;
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-color: black;
 
-@media (min-width: 1025px) {
+  @media (min-width: 1025px) {
     background-position: right;
     background-size: cover;
     background-image: url(${(props) => props.bgImage});
@@ -56,8 +56,8 @@ background-color: black;
 `
 
 const GameImage = ({ coordinates, children }) => {
-  const bgImage = coordsToBackgroundImageWeb(coordinates);
-  const sImage = coordsToBackgroundImageMob(coordinates);
+  const bgImage = coordsToBackgroundImageWeb(coordinates)
+  const sImage = coordsToBackgroundImageMob(coordinates)
 
   return (
     <StyledGameImage bgImage={bgImage} sImage={sImage}>{children}</StyledGameImage>
