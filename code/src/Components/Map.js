@@ -23,13 +23,15 @@ function coordsToMap(coords) {
 
 const StyledMap = styled.img`
   color: white;
-  width: 15%;
+  width: 75px;
   position: absolute;
-  top: 40px;
-  right: 40px;
+  top: 15px;
+  right: 15px;
 
 @media (min-width: 667px) {
-   width: 100px;
+   width: 120px;
+   top: 40px;
+   right: 40px;
   }
 `
 
@@ -37,7 +39,7 @@ const Map = ({ coordinates }) => {
   const MazeMap = coordsToMap(coordinates)
 
   return (
-    <StyledMap src={MazeMap} alt="Map of maze" title="Your current position" />
+    <StyledMap src={MazeMap} alt="Map of The Maze" title="Your current position" />
   )
 }
 
