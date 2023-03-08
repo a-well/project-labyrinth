@@ -15,14 +15,14 @@ const StartButton = styled.button`
   letter-spacing: 1.5px;
   text-transform: uppercase;
 
-:hover {
-  background-color:#8b7bb4;
-}
+  :hover {
+    background-color:#8b7bb4;
+  }
 
-:active {
-  position:relative;
-  top:1px;
-}
+  :active {
+    position:relative;
+    top:1px;
+  }
 `
 
 const NavButton = styled.button`
@@ -41,22 +41,22 @@ const NavButton = styled.button`
   padding:0;
   font-family: "Gloock";
 
-:hover {
-  background:linear-gradient(to bottom, #8b7bb4 5%, #e2dae8 100%);
-  background-color:#8b7bb4;
-}
+  :hover {
+    background:linear-gradient(to bottom, #8b7bb4 5%, #e2dae8 100%);
+    background-color:#8b7bb4;
+  }
 
-:active {
-  position:relative;
-  top:1px;
-}
+  :active {
+    position:relative;
+    top:1px;
+  }
 
-:disabled {
-  background:linear-gradient(to bottom, #a39ca8 5%, #dbdbdb 100%);
-  background-color:#a39ca8;
-  cursor:auto;
-  color:#9b93b3;
-}
+  :disabled {
+    background:linear-gradient(to bottom, #a39ca8 5%, #dbdbdb 100%);
+    background-color:#a39ca8;
+    cursor:auto;
+    color:#9b93b3;
+  }
 `
 
 const RestartButton = styled.button`
@@ -78,15 +78,15 @@ const RestartButton = styled.button`
   justify-self: center;
   font-family: "Average Sans";
 
-:hover {
-  background:linear-gradient(to bottom, #8b7bb4 5%, #e2dae8 100%);
-  background-color:#8b7bb4;
-}
+  :hover {
+    background:linear-gradient(to bottom, #8b7bb4 5%, #e2dae8 100%);
+    background-color:#8b7bb4;
+  }
 
-:active {
-  position:relative;
-  top:1px;
-}
+  :active {
+    position:relative;
+    top:1px;
+  }
 `
 
 export { NavButton, StartButton, RestartButton }
