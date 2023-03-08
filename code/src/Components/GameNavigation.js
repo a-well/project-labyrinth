@@ -4,61 +4,12 @@ import { useDispatch } from 'react-redux'
 import { generateNextDescription } from 'reducers/game'
 import { NavButton, RestartButton } from './Buttons'
 
-const GameNavigation = ({ actions, coords }) => {
-  const dispatch = useDispatch();
-
-  const handleOnClick = (direction) => {
-    dispatch(generateNextDescription(direction));
-  }
-
-  const availableMoves = {}
-  // eslint-disable-next-line array-callback-return
-  actions.map((action) => {
-    availableMoves[action.direction] = action
-  })
-
-  const resetGame = () => {
-    window.location.reload();
-  };
-
-  if (coords === '1,3') {
-    return (
-      <ChooseDirectionWrapper>
-        <RestartButton
-          type="button"
-          onClick={resetGame}>Restart game
-        </RestartButton>
-      </ChooseDirectionWrapper>
-    )
-  }
-
-  return (
-    <ChooseDirectionWrapper>
-      <p style={{ fontWeight: 'bold', fontSize: '23px', fontFamily: 'Cinzel' }}>Choose direction</p>
-      <DirectionGrid>
-        <div className="north">
-          <DirectionButton direction="North" isAvailable={availableMoves.North} handleOnClick={handleOnClick} />
-        </div>
-        <div className="west">
-          <DirectionButton direction="West" isAvailable={availableMoves.West} handleOnClick={handleOnClick} />
-        </div>
-        <div className="east">
-          <DirectionButton direction="East" isAvailable={availableMoves.East} handleOnClick={handleOnClick} />
-        </div>
-        <div className="south">
-          <DirectionButton direction="South" isAvailable={availableMoves.South} handleOnClick={handleOnClick} />
-        </div>
-      </DirectionGrid>
-    </ChooseDirectionWrapper>
-  )
-}
-
 const ChooseDirectionWrapper = styled.div`
   // border: solid 2px red;
   display: grid;
   color: white;
   text-align: center;
-  height: 240px;
+  height: 230px;
   align-self: end;
 
   @media (min-width: 667px) {
@@ -67,6 +18,8 @@ const ChooseDirectionWrapper = styled.div`
 
   @media (min-width: 1025px) {
     height: 270px;
+    padding: 0;
+    height: 240px;
   }
 `
 
@@ -94,6 +47,56 @@ const DirectionGrid = styled.div`
     grid-area: west;
   }
 `
+
+const GameNavigation = ({ actions, coords }) => {
+  const dispatch = useDispatch()
+
+  const handleOnClick = (direction) => {
+    dispatch(generateNextDescription(direction));
+  }
+
+  const availableMoves = {}
+  // eslint-disable-next-line array-callback-return
+  actions.map((action) => {
+    availableMoves[action.direction] = action
+  })
+
+  const resetGame = () => {
+    window.location.reload();
+  }
+
+  if (coords === '1,3') {
+    return (
+      <ChooseDirectionWrapper>
+        🙂
+        <RestartButton
+          type="button"
+          onClick={resetGame}>Play again
+        </RestartButton>
+      </ChooseDirectionWrapper>
+    )
+  }
+
+  return (
+    <ChooseDirectionWrapper>
+      <p style={{ fontWeight: 'bold', fontSize: '20px', fontFamily: 'Gloock', textTransform: 'uppercase', letterSpacing: '2.6px' }}>Choose direction</p>
+      <DirectionGrid>
+        <div className="north">
+          <DirectionButton direction="North" isAvailable={availableMoves.North} handleOnClick={handleOnClick} />
+        </div>
+        <div className="west">
+          <DirectionButton direction="West" isAvailable={availableMoves.West} handleOnClick={handleOnClick} />
+        </div>
+        <div className="east">
+          <DirectionButton direction="East" isAvailable={availableMoves.East} handleOnClick={handleOnClick} />
+        </div>
+        <div className="south">
+          <DirectionButton direction="South" isAvailable={availableMoves.South} handleOnClick={handleOnClick} />
+        </div>
+      </DirectionGrid>
+    </ChooseDirectionWrapper>
+  )
+}
 
 const DirectionButton = ({ direction, isAvailable, handleOnClick }) => {
   if (isAvailable) {

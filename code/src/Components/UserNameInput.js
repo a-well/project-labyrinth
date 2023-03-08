@@ -40,11 +40,11 @@ const UserNameInput = () => {
     <UserNameInputBackground>
       <Wrapper>
         <MazeLogo />
-        <p style={{ fontFamily: 'Spectral', fontSize: '55px', textTransform: 'uppercase' }}>The Maze</p>
+        <p style={{ fontFamily: 'Cinzel', fontSize: '55px', textTransform: 'uppercase' }}>The Maze</p>
         <UserNameInputContainer>
           <form onSubmit={(event) => onFormSubmit(event)} style={{ textAlign: 'center' }}>
             <label htmlFor="user-input">
-              <p style={{ textAlign: 'left', marginBottom: '13px', paddingLeft: '2px', color: 'white' }}>Enter name to begin</p>
+              <p style={{ textAlign: 'left', marginBottom: '13px', paddingLeft: '2px', color: 'white', letterSpacing: '1px' }}>Player name</p>
               <input
                 id="user-input"
                 type="text"
@@ -55,7 +55,7 @@ const UserNameInput = () => {
                 onChange={(event) => setUserNameInputValue(event.target.value)}
                 style={{ padding: '5px', width: '200px', marginBottom: '17px', opacity: '0.8', fontFamily: 'inherit', fontSize: 'inherit' }} />
             </label><br />
-            <StartButton type="submit" style={{ width: '100%', marginTop: '10px' }}>Start game</StartButton>
+            <StartButton type="submit" style={{ width: '100%', marginTop: '10px' }}>Start</StartButton>
           </form>
         </UserNameInputContainer>
       </Wrapper>
