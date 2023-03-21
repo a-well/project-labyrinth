@@ -1,36 +1,53 @@
-# Project Labyrinth
+# The Maze - A Browser Game
 
-This week's project comes in the form of a text-based adventure. Classic games like this usually present the user with a description of where they are and provide several alternatives about what they can do.
+## Intro
 
-Requirements:
+This is a pair programming project [Petra Eriksson](https://github.com/petrasson) and I did together part of the [Technigo front end course](https://technigo.io/).
 
-* Your page should be responsive.
-* Use redux to store the current state of the game.
-* Focus on making the UX of your app good. Handle the response delay.
-* Use thunks to wrap your API calls
-* Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+We were provided with the game API and tasked to build a responsive broswer game based on it using React and Redux.
+
+We created the design, front end code. The game illustations were generated using NightCafe Stable Diffusion.
+
+## API endpoints
+
+https://labyrinth.technigo.io/start
+
+https://labyrinth.technigo.io/action
 
 ## The problem
 
-We made weekly plan in figma. Wrote down what features and tasks we believed this project would contain, prioritiesed our post-its and agreed on an MVP. Made a basice design and turned it into wireframes for different devices. Started coding by breaking down the problem. (Fetch data, create reducers, a form, show next decription based on coordinates)
+First we played around with the API using Postman. Once we figured out how it worked we decided on how we wanted the game to behave.
 
-Technologies used:
-* HTML
-* CSS
-* Redux
-* fetch
-* styled components
-* Lottie animation
-* ESLint for code formatting
-* Netlify for deployment
-* Git for collaboration
-* Figma for planning and design
+Then we broke the project down into subtasks. 
+
+We created wireframes for the design in Figma, and then went on to generating the art with [NightCafe](https://creator.nightcafe.studio/) which we then edited. We finalised the design once we had the images ready, drawing inspiration from them.
+
+The game was written using React and Redux, see [Technologies used](#technologies-used) below. We used styled components for styling, and Lottie for the loading animation.
+
+Lastly, we deployed it to Netlify.
+
+## Technologies used
+
+- HTML
+- CSS
+- React
+- Redux
+- fetch
+- styled components
+- Lottie
+- [ESLint](https://eslint.org/) for code formatting
+- [Netlify](https://www.netlify.com/) for deployment
 
 ## View it live
 
-https://play-the-maze-game.netlify.app/
+https://play-the-maze.netlify.app/
 
-Running locally
+## Running locally
+
+```sh
+cd code
 npm i
 npm run start
-And go to http://localhost:3000
+```
+
+And go to `http://localhost:3000`
